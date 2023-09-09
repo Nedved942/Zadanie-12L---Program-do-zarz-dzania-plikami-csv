@@ -51,3 +51,5 @@ with open(output_file, "w", newline="") as file:
     write = csv.writer(file, delimiter=",")  # Utworzenie obiektu pliku csv
     for row in rows_list_from_csv:
         write.writerow(row)
+
+print("Polecenie zostało wykonane pomyślnie.")
