@@ -6,8 +6,17 @@ print("\n*** Program do zarządzania plikami csv ***\n")
 # # Przykładowe wartości
 # input_file, output_file, changes_list = "in.csv", "out.csv", ["0,0,gitara", "3,1,kubek", "1,2,17", "3,3,0"]
 
-input_file, output_file, changes_list = argv[1], argv[2], argv[3:]
-# print(input_file, output_file, changes_list)
+if len(argv) < 3:
+    print("Błąd - Zbyt mała liczba podanych argumentów.")
+    exit()
+
+try:
+    input_file, output_file, changes_list = argv[1], argv[2], argv[3:]
+except IndentationError:
+    print("Błąd - Niewłaściwa ilość podanych argumentów.")
+    exit()
+
+    # print(input_file, output_file, changes_list)
 
 rows_list_from_csv = []
 changes_list_mod = []
